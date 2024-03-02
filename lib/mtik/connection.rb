@@ -103,7 +103,8 @@ class MTik::Connection
 
     # Try using the the post-6.43 login API; on older routers this still initiates
     # a regular challenge-response cycle.
-    if @use_ssl || @unencrypted_plaintext
+    # if @use_ssl || @unencrypted_plaintext
+    if true
       warn("SENDING PLAINTEXT PASSWORD OVER UNENCRYPTED CONNECTION") unless @use_ssl
       reply = get_reply('/login',["=name=#{@user}","=password=#{@pass}"])
       if reply.length == 1 && reply[0].length == 2 && reply[0].key?('!done')
@@ -745,4 +746,3 @@ class MTik::Connection
     end
   end
 end
-

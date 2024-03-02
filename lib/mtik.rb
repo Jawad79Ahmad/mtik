@@ -42,9 +42,9 @@ module MTik
   require_relative 'mtik/connection.rb'
 
   ## Default MikroTik RouterOS API TCP port:
-  PORT = 8728
+  PORT = 8740
   ## Default MikroTik RouterOS API-SSL TCP port:
-  PORT_SSL = 8729
+  PORT_SSL = 8740
   ## Default username to use if none is specified:
   USER = 'admin'
   ## Default password to use if none is specified:
@@ -304,4 +304,3 @@ module MTik
   end
 
 end
-
